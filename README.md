@@ -50,4 +50,4 @@
 * 提交日志检测。e.g:“[Your name] commit messages”。
 * 测试覆盖率检测， 分支和语句覆盖率大于70%。
 * Push前，本地强制运行mvn clean package。  
-* test
+* test2

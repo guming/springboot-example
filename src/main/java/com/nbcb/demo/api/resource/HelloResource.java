@@ -36,7 +36,7 @@ public class HelloResource {
     @ApiOperation(value = "Hello", notes = "Display hello greeting", nickname = "hello")
     @GetMapping(value = "/hello")
     @Timed(value = "timer.api.hello", longTask = true)
-    public ResponseEntity<HelloResponseDTO> hello(@Valid @ModelAttribute HelloRequestDTO helloRequestDTO) {
+    ResponseEntity<HelloResponseDTO> hello(@Valid @ModelAttribute HelloRequestDTO helloRequestDTO) {
         logger.info("Request: " + helloRequestDTO);
 
         Hello hello = helloService.hello(helloRequestDTO.getName(), helloRequestDTO.getTitle());
